@@ -18,6 +18,7 @@ const positions = [
   const imgs = document.querySelectorAll(".img");
   
   gsap.set(".img", {
+    
     top: "45%",
     left: "50%",
     transform: "translate(-50%, -50%) scale(0)"

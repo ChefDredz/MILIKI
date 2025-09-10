@@ -1,7 +1,7 @@
 const sliderContents = [
   "Miliki.Digital ",
   "Stand-out",
-  "no-competitors",
+  "Modern",
   "Classy",
   "Impressive",
   "Beyond-Real",

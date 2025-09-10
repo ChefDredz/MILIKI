@@ -1,5 +1,5 @@
 @font-face {
-  font-family:"Orion" ;
+  font-family: "Orion";
   src: url(./fonts/OrionPrimeSlanted-Regular.ttf) format("truetype");
 }
 * {
@@ -17,6 +17,81 @@ body {
   font-family: "Neue Montreal";
 }
 
+/* pre-loader */
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  color: #fff;
+  pointer-events: none;
+}
+
+.counter {
+  position: fixed;
+  left: 50px;
+  bottom: 50px;
+  display: flex;
+  height: 100px;
+  font-size: 100px;
+  line-height: 102px;
+  clip-path: polygon(0 0, 100% 0, 100% 100px, 0 100px);
+  font-weight: 400;
+}
+
+.counter-1,
+.counter-2,
+.counter-3 {
+  position: relative;
+  top: -15px;
+}
+
+.num1offset1 {
+  position: relative;
+  right: -25px;
+}
+
+.num1offset2 {
+  position: relative;
+  right: -10px;
+}
+
+.loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  height: 50px;
+  transform: translate(-50%, -50%);
+  display: flex;
+  background: rgb(80, 80, 80);
+}
+
+.loader-1 {
+  position: relative;
+  background: #fff;
+  width: 200px;
+}
+
+.loader-2 {
+  position: relative;
+  width: 100px;
+  background: #fff;
+}
+
+.bar {
+  height: 50px;
+}
+
+.website-content {
+  width: 100%;
+  height: 100%;
+}
+
+/* preloader end */
+
 .links {
   display: flex;
   justify-content: space-evenly;
@@ -30,6 +105,10 @@ body {
   height: 50px;
   padding: 0 20px;
   border-radius: 20px;
+  z-index: 7;
+  top: 20px;
+  margin-top: 60vw;
+  display: none;
 }
 a {
   text-decoration: none;
@@ -37,6 +116,7 @@ a {
   font-size: 17px;
   margin-left: 0px;
   transition-duration: 1s;
+  z-index: 7;
 }
 
 a:hover {
@@ -236,13 +316,22 @@ textarea#message {
     flex-direction: column;
     align-items: flex-start;
     gap: 1em;
-
+  }
+  .loading-screen {
+    z-index: 5;
+    pointer-events: all;
+    height: 100vh;
   }
 }
 
 @media (max-width: 900px) {
   .col {
     width: 100%;
+  }
+  .loading-screen {
+    z-index: 5;
+    pointer-events: all;
+    height: 100vh;
   }
   .links {
     width: max-content;
@@ -252,7 +341,5 @@ textarea#message {
     margin-top: 20vh;
     z-index: 2;
     margin-right: 20vw;
-   
-    
   }
 }

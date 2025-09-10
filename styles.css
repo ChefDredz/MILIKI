@@ -25,73 +25,148 @@ body {
   font-family: "PP Neue Montreal";
 }
 
+/* pre-loader */
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  color: #fff;
+  pointer-events: none;
+}
+
+.counter {
+  position: fixed;
+  left: 50px;
+  bottom: 50px;
+  display: flex;
+  height: 100px;
+  font-size: 100px;
+  line-height: 102px;
+  clip-path: polygon(0 0, 100% 0, 100% 100px, 0 100px);
+  font-weight: 400;
+}
+
+.counter-1,
+.counter-2,
+.counter-3 {
+  position: relative;
+  top: -15px;
+}
+
+.num1offset1 {
+  position: relative;
+  right: -25px;
+}
+
+.num1offset2 {
+  position: relative;
+  right: -10px;
+}
+
+.loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  height: 50px;
+  transform: translate(-50%, -50%);
+  display: flex;
+  background: rgb(80, 80, 80);
+}
+
+.loader-1 {
+  position: relative;
+  background: #fff;
+  width: 200px;
+}
+
+.loader-2 {
+  position: relative;
+  width: 100px;
+  background: #fff;
+}
+
+.bar {
+  height: 50px;
+}
+
+.website-content {
+  width: 100%;
+  height: 100%;
+}
+
+/* preloader end */
+
 #top-logo {
   font-family: "Carpenter Regular";
   font-size: 20px;
   text-decoration: none;
   color: #fff;
   letter-spacing: 2px;
-} 
+}
 
 .cursor {
-    position: absolute;
-    background: white;
-    width: 8px;
-    height: 8px;
-    border-radius: 100%;
-    z-index: 1;
-    transition: 0.5s cubic-bezier(0.75, -1.27, 0.3, 2.33) transform,
-        0.2s cubic-bezier(0.75, -1.27, 0.3, 2.33) opacity;
-    user-select: none;
-    pointer-events: none;
-    transform: scale(0.8);
+  position: absolute;
+  background: white;
+  width: 8px;
+  height: 8px;
+  border-radius: 100%;
+  z-index: 1;
+  transition: 0.5s cubic-bezier(0.75, -1.27, 0.3, 2.33) transform,
+    0.2s cubic-bezier(0.75, -1.27, 0.3, 2.33) opacity;
+  user-select: none;
+  pointer-events: none;
+  transform: scale(0.8);
 }
 
 .cursor::before {
-    content: "";
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: block;
-    background-image: url("http://mirkozeppieri.emanuelepapale.com/wp-content/uploads/2018/07/project-hover-cursor.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: 100%;
-    opacity: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  background-image: url("http://mirkozeppieri.emanuelepapale.com/wp-content/uploads/2018/07/project-hover-cursor.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 100%;
+  opacity: 0;
 }
 
 .cursor.active {
-    opacity: 1;
-    transform: scale(12);
+  opacity: 1;
+  transform: scale(12);
 }
 
 .cursor.active::before {
-    opacity: 1;
+  opacity: 1;
 }
 
 .cursor-follower {
-    position: absolute;
-    background: rgba(255, 255, 255, 0.1);
-    width: 40px;
-    height: 40px;
-    border-radius: 100%;
-    z-index: 1;
-    transition: 0.6s cubic-bezier(0.75, -1.27, 0.3, 2.33) transform,
-        0.4s cubic-bezier(0.75, -1.27, 0.3, 2.33) opacity;
-    user-select: none;
-    pointer-events: none;
-    transform: translate(4px, 4px);
+  position: absolute;
+  background: rgba(255, 255, 255, 0.1);
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  z-index: 1;
+  transition: 0.6s cubic-bezier(0.75, -1.27, 0.3, 2.33) transform,
+    0.4s cubic-bezier(0.75, -1.27, 0.3, 2.33) opacity;
+  user-select: none;
+  pointer-events: none;
+  transform: translate(4px, 4px);
 }
 
 .cursor-follower.active {
-    opacity: 0.3;
-    transform: scale(0);
+  opacity: 0.3;
+  transform: scale(0);
 }
 .cursor-follower.active::before {
-    opacity: 1;
+  opacity: 1;
 }
 
 img {
@@ -174,17 +249,17 @@ nav > div {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2em;background-color: rgba(255, 255, 255, 0.216);
+  gap: 2em;
+  background-color: rgba(255, 255, 255, 0.216);
   backdrop-filter: blur(10px);
   border-top: 1px solid rgba(255, 255, 255, 0.4);
   border-left: 1px solid rgba(255, 255, 255, 0.4);
   box-shadow: 3px 3px 30px rgba(0, 0, 0, 0.089);
-   max-width: 10vw;
-  margin-left:70vw;
+  max-width: 10vw;
+  margin-left: 70vw;
   height: 40px;
   padding: 0 20px;
   border-radius: 20px;
-
 }
 
 .shop a {
@@ -255,7 +330,7 @@ nav > div {
   height: 100px;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
   overflow: hidden;
-  overflow-y: hidden;
+  /* overflow-y: hidden; */
 }
 
 .slider-content-active {
@@ -798,7 +873,6 @@ img {
     width: 100vw;
     padding: 1em;
     font-size: 14px;
-    
   }
   .overlay {
     height: 70vh;
@@ -821,9 +895,8 @@ img {
     z-index: 2;
   }
 
-  .containers{
+  .containers {
     margin-bottom: -30vh;
-
   }
 
   .service-info {
@@ -843,7 +916,7 @@ img {
 
   .service-img {
     display: none;
-  } 
+  }
 
   .content {
     position: absolute;
@@ -912,49 +985,47 @@ img {
   }
 
   .marquee {
-  width: 100vw;
-  height: 150px;
-  max-width: 100vw;
-  /* margin: 0 auto; */
-  white-space: nowrap;
-  overflow: hidden;
-  overflow-y: hidden;
-  /* padding-top: 1.2em; */
-  position: relative;
-  
-    
-    align-items: center;
-}
+    width: 100vw;
+    height: 150px;
+    max-width: 100vw;
+    /* margin: 0 auto; */
+    white-space: nowrap;
+    overflow: hidden;
+    overflow-y: hidden;
+    /* padding-top: 1.2em; */
+    position: relative;
 
-.marquee span {
-  font-family: "Orion";
-  font-weight: 600;
-  color: #000;
-  font-size: 6em;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  display: inline-block;
-  padding-left: -10%;
-  animation: marquee-animation 80s linear infinite;
-  margin-top: 0px;
-  margin-bottom: 10px;
-}
-#marquee1 {
-  position: absolute;
-  /* z-index: 2; */
-  
-  /* margin-bottom: 100vh; */
-  margin-top: -95vh;
-}
-@keyframes marquee-animation {
-  0% {
-    transform: translate(0, 0);
+    align-items: center;
   }
-  100% {
-    transform: translate(-100%, 0);
+
+  .marquee span {
+    font-family: "Orion";
+    font-weight: 600;
+    color: #000;
+    font-size: 6em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: inline-block;
+    padding-left: -10%;
+    animation: marquee-animation 80s linear infinite;
+    margin-top: 0px;
+    margin-bottom: 10px;
   }
-  
-}
+  #marquee1 {
+    position: absolute;
+    /* z-index: 2; */
+
+    /* margin-bottom: 100vh; */
+    margin-top: -95vh;
+  }
+  @keyframes marquee-animation {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(-100%, 0);
+    }
+  }
 
   .copy {
     display: none;
@@ -963,7 +1034,7 @@ img {
 a {
   text-decoration: none;
   color: #fff;
-  font-size: 17px;  
+  font-size: 17px;
   margin-left: 0px;
   transition-duration: 1s;
 }
@@ -990,12 +1061,11 @@ a:hover {
     margin-left: 200px;
     max-width: 100px;
   }
-  h1{
+  h1 {
     font-size: 25px;
     letter-spacing: 1px;
     font-weight: lighter;
     margin-right: 20vw;
-
   }
 
   .tech-stack {
@@ -1008,7 +1078,7 @@ a:hover {
     /* margin-bottom: 2vh; */
   }
 
-  .containers{
+  .containers {
     margin-bottom: -35vh;
   }
   #marquee1 {
@@ -1023,5 +1093,3 @@ a:hover {
     display: none;
   }
 }
-
-
