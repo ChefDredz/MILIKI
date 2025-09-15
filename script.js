@@ -63,7 +63,7 @@ document.addEventListener("click", function () {
   });
 
   splitTextIntoSpans(".slider-content-next h1");
-  gsap.set(".slider-content-next h1 span", { top: "200px"  });
+  gsap.set(".slider-content-next h1 span", { top: "200px" });
 
   gsap.to(".slider-content-next", {
     top: "0",
@@ -141,3 +141,102 @@ document.addEventListener("click", function () {
     },
   });
 });
+
+const openButton = document.querySelectorAll(".open");
+const closeButton = document.querySelectorAll(".close");
+const modal = document.querySelector(".modal");
+
+function setModalContent(service) {
+  const modalContainer = modal.querySelector(".modal-container");
+  switch (service) {
+    case "ui":
+      modalContainer.innerHTML = `
+      <h2>Hotel Solutions</h2>
+    <div class="modal-container">
+      <div class="intro1">
+      <div>
+        <img class="modal-img" src="./assets/img3jpg" alt="Hotel Solutions" />
+      </div>
+      <div class="modal-text">
+        <p>
+          Miliki.Digital empowers hotels and luxury lounges to stand out online with modern, classy, and impressive digital experiences.<br>
+          We solve the problem of generic web presence by delivering authentic, innovative design and technology—helping your brand attract high-value guests and create memorable first impressions.
+        </p>
+      </div> 
+      </div> 
+        <h2>Hotel Solutions</h2>
+        <ul>
+          <li>Custom booking systems</li>
+          <li>Luxury branding</li>
+          <li>Mobile-friendly design</li>
+        </ul>
+      
+    </div>
+    `;
+      break;
+    case "ecommerce":
+      modalContainer.innerHTML =
+        "<h2>E-Commerce</h2><p>Grow your online store with us...</p>";
+      break;
+    case "hotel":
+      modalContainer.innerHTML = `<h2>Hotel Solutions</h2>
+    <div class="modal-content">
+      <div>
+        <img class="modal-img" src="./assets/hotel.jpg" alt="Hotel Solutions" />
+      </div>
+      <div class="modal-text">
+        <p>
+          Miliki.Digital empowers hotels and luxury lounges to stand out online with modern, classy, and impressive digital experiences.<br>
+          We solve the problem of generic web presence by delivering authentic, innovative design and technology—helping your brand attract high-value guests and create memorable first impressions.
+        </p>
+        <ul>
+          <li>Custom booking systems</li>
+          <li>Luxury branding</li>
+          <li>Mobile-friendly design</li>
+        </ul>
+      </div>
+    </div>`;
+      break;
+    case "booking":
+      modalContainer.innerHTML =
+        "<h2>Booking Systems</h2><p>Seamless booking for your guests...</p>";
+      break;
+    case "life":
+      modalContainer.innerHTML =
+        "<h2>Life & Lifestyle</h2><p>Enhance your brand's lifestyle appeal...</p>";
+      break;
+    default:
+      modalContainer.innerHTML =
+        "<h2>Service</h2><p>Details coming soon...</p>";
+  }
+}
+
+openButton.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const service = btn.getAttribute("data-service");
+    setModalContent(service);
+    modal.classList.add("active");
+    modal.classList.remove("inactive");
+    modal.style.display = "flex";
+    document.body.style.overflow = "hidden";
+  });
+});
+
+closeButton.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    modal.classList.remove("active");
+    modal.classList.add("inactive");
+    modal.style.display = "none";
+    document.body.style.overflow = "";
+  });
+});
+
+window.addEventListener("click", (event) => {
+  if (event.target === modal) {
+    modal.classList.remove("active");
+    modal.classList.add("inactive");
+    modal.style.display = "none";
+    document.body.style.overflow = "";
+  }
+});
+// let isAnimating = false;

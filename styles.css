@@ -188,6 +188,7 @@ a {
   font-size: 17px;
   margin-left: 0px;
   transition-duration: 1s;
+  font-family: "retorika";
 }
 
 a:hover {
@@ -266,6 +267,7 @@ nav > div {
   font-size: 20px;
   margin-left: 20px;
   width: 100px;
+  font-family: "retorika";
 }
 
 .copy {
@@ -282,9 +284,10 @@ nav > div {
 
 #copy {
   text-transform: uppercase;
-  font-family: "orion";
-  font-size: 16px;
-  font-weight: lighter;
+  font-family: "retorika";
+  font-weight: 700;
+  font-size: 26px;
+  
   color: #fff;
   z-index: 1;
   max-width: fit-content;
@@ -449,6 +452,24 @@ img {
   padding: 1em;
 }
 
+/* modal section */
+
+.open {
+  padding: 1em 2em;
+  font-size: 16px;
+  background: none;
+  border: 1px solid #fff;
+  color: #fff;
+  cursor: pointer;
+  transition-duration: 0.5s;
+}
+.open:hover {
+  background-color: #fff;
+  color: #000;
+  transition-duration: 0.5s;
+}
+
+
 .img {
   width: 30%;
   height: 100%;
@@ -609,13 +630,18 @@ img {
   border: none;
   outline: none;
   text-transform: uppercase;
-  font-size: 12px;
+  font-size: 22px;
   font-family: "Basier Square Mono";
   padding: 0.5em 1em;
   cursor: pointer;
-  color: #000;
+  color: #fff;
   mix-blend-mode: difference;
   z-index: 2;
+  background-color: rgba(255, 255, 255, 0.216);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(255, 255, 255, 0.4);
+  border-left: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 3px 3px 30px rgba(0, 0, 0, 0.089);
 }
 
 .item {
@@ -899,10 +925,15 @@ img {
     margin-bottom: -30vh;
   }
 
+  .service {
+    margin-bottom: 14vh;
+    height: 120px;
+  }
+
   .service-info {
     flex: 2;
     width: 100%;
-    height: 100%;
+    height: 120%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -918,6 +949,74 @@ img {
     display: none;
   }
 
+  .intro1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+    font-size: 18px;
+    flex-direction: column;
+  }
+
+  .intro1 p {
+    /* margin-top: 1em;
+    font-size: 14px;
+    text-align: center;
+    line-height: 150%;
+    font-family: "retorika";
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 1em;
+    border-radius: 10px;
+    background-color: rgba(32, 32, 32, 0.416);
+    backdrop-filter: blur(20px);
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
+    border-left: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 3px 3px 30px rgba(0, 0, 0, 0.089);
+    width: 100vh; */
+    display: none;
+  }
+  .outro1 {
+    margin-top: 2em;
+    font-size: 14px;
+    text-align: center;
+    line-height: 150%;
+  }
+
+  h3 {
+    font-size: 16px;
+    margin: 0.5em;
+    font-family: "Carpenter Regular";
+    text-align: center;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #fff;
+  }
+  .outro1 ul li {
+    margin-bottom: 0.5em;
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    font-family: "retorika";
+    font-weight: 400;
+    transition-duration: 1s;
+    line-height: 150%;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.4);
+  }
+
+  .modal-img {
+    width: 80vw;
+    height: 200px;
+    margin: 2em 0;
+    border-radius: 10px;
+    overflow: hidden;
+    object-fit: cover;
+  }
+  #open {
+    padding: 0.5em 1em;
+    font-size: 14px;
+  }
+   
   .content {
     position: absolute;
     width: 100vw;
@@ -951,7 +1050,7 @@ img {
   .tech-stack {
     height: 100vh;
     width: 100vw;
-    margin-top: -110vh;
+    margin-top: -40vh;
     /* margin-bottom: 5vh; */
     background-color: #000;
     position: relative;
@@ -1016,7 +1115,7 @@ img {
     /* z-index: 2; */
 
     /* margin-bottom: 100vh; */
-    margin-top: -95vh;
+    margin-top: -22vh;
   }
   @keyframes marquee-animation {
     0% {
@@ -1071,7 +1170,7 @@ a:hover {
   .tech-stack {
     height: 100vh;
     width: 100vw;
-    margin-top: -5vh;
+    margin-top: 40vh;
     /* margin-bottom: 5vh; */
     background-color: #000;
     position: relative;
@@ -1082,8 +1181,9 @@ a:hover {
     margin-bottom: -35vh;
   }
   #marquee1 {
-    margin-top: -20vh;
-    margin-bottom: 20vh;
+    display: none;
+    /* margin-top: -22vh;
+    margin-bottom: 20vh; */
   }
   .service-info p {
     font-size: 18px;

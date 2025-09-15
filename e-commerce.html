@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Custom Websites</title>
+    <link rel="stylesheet" href="./e-commerce .css" />
+  </head>
+  <body>
+    <div class="logo">
+      <a id="top-logo" href="./index.html">MILIKI.DIGITAL</a>
+    </div>
+    <div class="links">
+      <a href="./index.html">Home</a>
+      <!-- <a href="./scroll.html">About</a>
+          <a href="./gallery.html">Work</a> -->
+    </div>
+    <div class="shop">
+      <a href="./index6.html">Contact</a>
+    </div>
+    <div class="container">
+      <div class="cursor"></div>
+      <div class="cursor-follower"></div>
+      <div class="row" id="row-1">
+        <div class="col">
+          <div class="img-container right">
+            <img src="./assets/e-merrh.1.jpg" alt="" />
+            <div class="scrolltext">
+              <p>
+                Selling online isn’t about just “having a shop.” It’s about
+                creating a store that engages, convinces, and converts. That’s
+                where we shine.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col"></div>
+      </div>
+      <div class="row" id="row-2">
+        <div class="col"></div>
+        <div class="col">
+          <div class="img-container left">
+            <img src="./assets/e-merrh.2.jpg" alt="" />
+            <div class="scrolltext">
+              <p>Why choose us?</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row" id="row-3">
+        <div class="col">
+          <div class="img-container right">
+            <img src="./assets/e-merrh.4.jpg" alt="" />
+            <div class="scrolltext">
+              <p>
+                We craft beautiful, high-converting online stores that are easy
+                to manage and a joy to shop. From sleek product pages to smooth
+                checkout flows, we handle it all.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col"></div>
+      </div>
+      <div class="row" id="row-4">
+        <div class="col"></div>
+        <div class="col">
+          <div class="img-container left">
+            <img src="./assets/e-merrh.3.jpg" alt="" />
+            <div class="scrolltext">
+              <p>Smooth, secure checkout experiences</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row" id="row-5">
+        <div class="col">
+          <div class="img-container right">
+            <img src="./assets/e-merrh.10.jpg" alt="" />
+            <div class="scrolltext">
+              <p>
+                Conversion-focused layouts designed to increase sales. <br />
+                Interfaces that guide users effortlessly toward action. Motion
+                and animation that keep users engaged.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col"></div>
+      </div>
+      <div class="row" id="row-6">
+        <div class="col"></div>
+        <div class="col">
+          <div class="img-container left">
+            <img src="./assets/e-merrh.6.jpg" alt="" />
+            <div class="scrolltext">
+              <p>Mobile-first design for shoppers on the go.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row" id="row-7">
+        <div class="col">
+          <div class="img-container right">
+            <img src="./assets/e-merrh.7.png" alt="" />
+            <div class="scrolltext">
+              <p>
+                Now isn't the time to stay silent—we're driven by technology,
+                and this is our voice. It's our language, and we're eager to
+                share it, hoping it resonates with millions. <br />We shape our
+                future today
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col"></div>
+      </div>
+      <div class="row" id="row-8">
+        <div class="col"></div>
+        <div class="col">
+          <div class="img-container left">
+            <img src="./assets/e-merrh.8.jpg" alt="" />
+            <div class="scrolltext">
+              <p>A great journey begins with the first word "Hello!"</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row" id="row-9">
+        <div class="col">
+          <div class="img-container right">
+            <img src="./assets/e-merrh.9.jpg" alt="" />
+            <div class="scrolltext">
+              <p>
+                Ready to elevate your online store? Let's chat and create
+                something amazing together.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col"></div>
+      </div>
+      <div class="row" id="row-10">
+        <div class="col"></div>
+        <div class="col">
+          <div class="img-container left">
+            <img src="./assets/e-merrh.5.jpg" alt="" />
+            <div class="scrolltext">
+              <p>Knock, knock. We’re ready to dive into your world.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="links">
+        <a href="./index.html">Home</a>
+      </div>
+      <div class="whitespace"></div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="./scroll.js"></script>
+    <!-- <script src="./pre-web.js"></script> -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        function isInViewport(el) {
+          const rect = el.getBoundingClientRect();
+          return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <=
+              (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <=
+              (window.innerWidth || document.documentElement.clientWidth)
+          );
+        }
+
+        const rows = document.querySelectorAll(".row");
+        rows.forEach((row) => {
+          if (isInViewport(row)) {
+            const img = row.querySelector("img");
+            if (row.querySelector(".left")) {
+              gsap.to(img, {
+                clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+              });
+            } else {
+              gsap.to(img, {
+                clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+              });
+            }
+          }
+        });
+
+        gsap.utils.toArray(".img-container.right img").forEach((img) => {
+          gsap.to(img, {
+            clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+            scrollTrigger: {
+              trigger: img,
+              start: "top 75%",
+              end: "bottom 70%",
+              scrub: true,
+            },
+          });
+        });
+
+        gsap.utils.toArray(".img-container.left img").forEach((img) => {
+          gsap.to(img, {
+            clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+            scrollTrigger: {
+              trigger: img,
+              start: "top 75%",
+              end: "bottom 70%",
+              scrub: true,
+            },
+          });
+        });
+
+        gsap.utils.toArray(".img-container p").forEach((text) => {
+          gsap.from(text, {
+            opacity: 0,
+            y: 20,
+            scrollTrigger: {
+              trigger: text,
+              start: "top 90%",
+              toggleActions: "play none none reverse",
+            },
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
