@@ -901,7 +901,7 @@ img {
     font-size: 14px;
   }
   .overlay {
-    height: 70vh;
+    height: 100vh;
     width: 100vw;
     /* margin-top: 200vh; */
     position: absolute;
@@ -913,7 +913,7 @@ img {
   }
 
   .container {
-    height: 70vh;
+    height: 100vh;
     overflow: scroll;
 
     position: absolute;
@@ -959,20 +959,7 @@ img {
   }
 
   .intro1 p {
-    /* margin-top: 1em;
-    font-size: 14px;
-    text-align: center;
-    line-height: 150%;
-    font-family: "retorika";
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    padding: 1em;
-    border-radius: 10px;
-    background-color: rgba(32, 32, 32, 0.416);
-    backdrop-filter: blur(20px);
-    border-top: 1px solid rgba(255, 255, 255, 0.4);
-    border-left: 1px solid rgba(255, 255, 255, 0.4);
-    box-shadow: 3px 3px 30px rgba(0, 0, 0, 0.089);
-    width: 100vh; */
+    
     display: none;
   }
   .outro1 {
@@ -1020,7 +1007,7 @@ img {
   .content {
     position: absolute;
     width: 100vw;
-    height: 70vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
