@@ -410,6 +410,7 @@ img {
   padding: 8em 2em;
   display: flex;
   flex-direction: column;
+  height: 75%;
 }
 
 .services-header {
@@ -880,6 +881,9 @@ img {
     margin-left: 190px;
     max-width: 100px;
   }
+  .shop a{
+    margin-left: -7px;
+  }
 
   #top-logo {
     display: none;
@@ -923,6 +927,10 @@ img {
 
   .containers {
     margin-bottom: -30vh;
+  }
+
+  .services{
+    height: 75%;
   }
 
   .service {
@@ -1140,12 +1148,15 @@ a:hover {
   }
   a {
     font-size: 14px;
-    margin-left: 0px;
+    /* margin-left: 0px; */
   }
 
   .shop {
     margin-left: 200px;
     max-width: 100px;
+  }
+  .shop a{
+    margin-left: -7px;
   }
   h1 {
     font-size: 25px;
@@ -1166,6 +1177,9 @@ a:hover {
 
   .containers {
     margin-bottom: -35vh;
+  }
+  .services{
+    height: 85%;
   }
   #marquee1 {
     display: none;
