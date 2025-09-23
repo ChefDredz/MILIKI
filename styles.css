@@ -366,8 +366,8 @@ h1 span {
 /* service section */
 .containers {
   width: 100vw;
-  height: 100%;
-  margin-bottom: -12em;
+  height: 95%;
+  /* margin-bottom: -12em; */
 }
 
 h2 {
@@ -411,7 +411,7 @@ img {
   padding: 8em 2em;
   display: flex;
   flex-direction: column;
-  height: 75%;
+  height: 79%;
 }
 
 .services-header {
@@ -505,7 +505,7 @@ html.lenis body {
   width: 100vw;
   height: 150px;
   max-width: 100vw;
-  margin: 0 auto;
+  margin: 10px;
   white-space: nowrap;
   overflow: hidden;
   overflow-y: hidden;
@@ -951,12 +951,12 @@ img {
     z-index: 2;
   }
 
-  /* .containers {
-    margin-bottom: -30vh;
-  } */
+  .containers {
+    height: 80%;
+  }
 
   .services{
-    height: 75%;
+    height: 60%;
   }
 
   .service {
@@ -1021,7 +1021,7 @@ img {
   .tech-stack {
     height: 100vh;
     width: 100vw;
-    margin-top: -20vh;
+    margin-top: 7vh;
     /* margin-bottom: 5vh; */
     background-color: #000;
     position: relative;
@@ -1062,7 +1062,7 @@ img {
     white-space: nowrap;
     overflow: hidden;
     background-color: #000;
-    
+z-index: 3;
     /* padding-top: 1.2em; */
     position: relative;
 
@@ -1159,16 +1159,16 @@ a:hover {
   .tech-stack {
     height: 100vh;
     width: 100vw;
-    margin-top: 17vh;
+    margin-top: 5vh;
     /* margin-bottom: 5vh; */
     background-color: #000;
     position: relative;
     /* margin-bottom: 2vh; */
   }
 
-  .containers {
+  /* .containers {
     margin-bottom: -35vh;
-  }
+  } */
   .services{
     height: 75%;
   }
@@ -1183,4 +1183,23 @@ a:hover {
   #top-logo {
     display: none;
   }
+}
+
+@media (min-width: 359px){
+    .tech-stack{
+      margin-top:2px;
+    }
+    #marquee1 {
+    /* display: none; */
+    margin-top: 26vh;
+  }
+  .containers {
+    /* margin-bottom: 5vh; */
+    height: 90%;
+  }
+  .services{
+    height: 90%;
+  }
+
+
 }
