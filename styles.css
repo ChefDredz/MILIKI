@@ -955,7 +955,7 @@ img {
   } */
 
   .services{
-    height: 70%;
+    height: 85%;
   }
 
   .service {
@@ -1020,7 +1020,7 @@ img {
   .tech-stack {
     height: 90vh;
     width: 100vw;
-    margin-top: -50vh;
+    margin-top: -20vh;
     /* margin-bottom: 5vh; */
     background-color: #000;
     position: relative;
@@ -1086,7 +1086,7 @@ img {
     /* z-index: 2; */
 
     /* margin-bottom: 100vh; */
-    margin-top: -47vh;
+    margin-top: -27vh;
   }
   @keyframes marquee-animation {
     0% {
@@ -1156,7 +1156,7 @@ a:hover {
   .tech-stack {
     height: 100vh;
     width: 100vw;
-    margin-top: 60vh;
+    margin-top: 82vh;
     /* margin-bottom: 5vh; */
     background-color: #000;
     position: relative;
@@ -1170,8 +1170,8 @@ a:hover {
     height: 85%;
   }
   #marquee1 {
-    display: none;
-    
+    /* display: none; */
+    margin-top: 60vh;
   }
   .service-info p {
     font-size: 18px;
